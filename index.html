@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/99952062c2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Heavens</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__line"></div>
+        <div class="header__nav">
+            <div class="header__nav-left">
+                <ul class="header__nav-item">
+                    <li><a href="#">Guilde</a><i class="fas fa-caret-right"></i></li>
+                    <li class="header__nav-line"></li>
+                    <li class="dropdown-list">
+                        <div class="dropdown">
+                            <div class="dropdown__btn">
+                                <a id="outils" href="#">Outils</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="header__logo">
+                <a href="#">
+                    <img src="/assets/images/logo.png" alt="">
+                </a>
+            </div>
+            <div class="header__nav-right">
+                <ul class="header__nav-item">
+                    <li><a href="https://discord.gg/qRsaFDXZ">Discord</a></li>
+                    <li class="header__nav-line"></li>
+                    <li><a href="#">Connexion</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="content-outils__modal">
+            <div class="outils__modal">
+                <div class="outils__modal-skin">
+                    <img src="/assets/images/308_400.png" alt="">
+                </div>
+                <div class="outils__modal-skin">
+                    <img src="/assets/images/309_400.png" alt="">
+                </div>
+                <div class="outils__modal-header">
+                    <ul>
+                        <li class="first-active">Donjon 100-150</li>
+                        <li class="header__nav-line"></li>
+                        <li class="second-active">Donjon 150-190</li>
+                        <li class="third-active">Participant</li>
+                    </ul>
+                    <div class="outils__modal-header-close close__modal">
+                        <i class="close fas fa-times"></i>
+                    </div>
+                </div>
+                <div class="outils__modal-main">
+                    <div class="outils__modal-main-first">
+                        <p>test</p>
+                    </div>
+                    <div class="outils__modal-main-second">
+                        <p>test 2</p>
+                    </div>
+                    <div class="outils__modal-main-third">
+                        <form>
+                            <input type="text" class="todo-input">
+                            <button class="todo-button" type="submit">
+                                <img src="/assets/images/Dofus_emeraude.png" alt="">
+                            </button>
+                        </form>
+                        <div class="todo-container">
+                            <ul class="todo-list"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Script -->
+    <script src="JS/modals.js"></script>
+    <script src="JS/todolist.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,508 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-image: url("/assets/images/bg_heavens.jpg");
+  background-size: cover;
+  background-position: center -20%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  width: 100%;
+  height: 120px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: black;
+}
+
+.header__line {
+  position: absolute;
+  top: 29%;
+  width: 100%;
+  height: 3px;
+  background-color: #8FA800;
+}
+
+.header__logo {
+  position: relative;
+  padding-top: 0.9em;
+}
+
+.header__logo img {
+  max-width: 200px;
+}
+
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.header__nav i {
+  font-size: 16px;
+  color: #8FA800;
+  -webkit-transition: ease-in-out 200ms;
+  transition: ease-in-out 200ms;
+}
+
+.header__nav a {
+  color: #ffffff;
+  -webkit-transition: ease-in-out 200ms;
+  transition: ease-in-out 200ms;
+}
+
+.header__nav a:hover {
+  color: #8FA800;
+  -webkit-transition: ease-in-out 200ms;
+  transition: ease-in-out 200ms;
+}
+
+.header__nav-line {
+  width: 2px;
+  height: 30px;
+  background-color: #333333;
+  margin: 0 1em;
+}
+
+.header__nav-left {
+  padding-right: 1em;
+}
+
+.header__nav-left a {
+  padding-right: 0.5em;
+}
+
+.header__nav-right {
+  padding-left: 1em;
+}
+
+.header__nav .header__nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 2em;
+}
+
+.header__nav .header__nav-item li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 24px;
+}
+
+.header__nav-left li:hover i {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: ease-in-out 200ms;
+  transition: ease-in-out 200ms;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dropdown-content {
+  display: none;
+  width: 150px;
+  position: absolute;
+  background: black;
+}
+
+.dropdown-content-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dropdown-content-list li:nth-child(1) {
+  padding-top: 2em;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block !important;
+}
+
+main {
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: calc(100vh - 120px);
+}
+
+.content-outils__modal {
+  position: fixed;
+  width: 100%;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: ease-in-out 800ms;
+  transition: ease-in-out 800ms;
+}
+
+.outils__modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 60%;
+  min-height: 700px;
+  background: black;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.58);
+  box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.58);
+}
+
+.outils__modal-skin:nth-child(1) {
+  position: absolute;
+  top: 50%;
+  left: -17%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.outils__modal-skin:nth-child(2) {
+  position: absolute;
+  top: 50%;
+  right: -17%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+
+.outils__modal-skin:nth-child(2) img {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.outils__modal-header {
+  position: relative;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background: black;
+  border-bottom: 3px solid #8FA800;
+  color: white;
+  font-size: 1.5em;
+  padding: 1em;
+}
+
+.outils__modal-header ul {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.outils__modal-header ul li {
+  cursor: pointer;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+.outils__modal-header ul li:nth-child(4) {
+  position: absolute;
+  right: 80px;
+}
+
+.outils__modal-header ul li:nth-child(5) {
+  position: absolute;
+  right: 0;
+}
+
+.outils__modal-header ul li:hover {
+  color: #8FA800;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+.outils__modal-header-close {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.outils__modal-header-close .close {
+  -webkit-transition: 0.6s ease-out;
+  transition: 0.6s ease-out;
+}
+
+.outils__modal-header-close:hover .close {
+  -webkit-transform: rotateZ(720deg);
+  transform: rotateZ(720deg);
+  color: #8FA800;
+}
+
+.outils__modal-main {
+  color: #ffffff;
+}
+
+.outils__modal-main-first, .outils__modal-main-second, .outils__modal-main-third {
+  display: none;
+}
+
+.outils-visible {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: ease-in-out 800ms;
+  transition: ease-in-out 800ms;
+}
+
+.modal-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.outils__modal-main-third {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: calc(700px - 81px);
+}
+
+.outils__modal-main-third form {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1em;
+}
+
+.todo-input {
+  border: #8FA800 2px solid;
+  border-radius: 8px;
+  min-width: 232px;
+  min-height: 55px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  padding-left: 1em;
+}
+
+.todo-input:focus {
+  outline: none;
+}
+
+.todo-button {
+  position: absolute;
+  right: -40%;
+  max-width: 100px;
+  border: none;
+  background: transparent;
+}
+
+.todo-button img {
+  width: 100%;
+  cursor: pointer;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+.todo-button img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+.todo-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-width: 30%;
+  max-height: 536px;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.todo li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+  background: #fda085;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.complete-btn {
+  background: green;
+}
+
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  -webkit-transform: translateY(8rem) rotate(20deg);
+          transform: translateY(8rem) rotate(20deg);
+  opacity: 0;
+}
